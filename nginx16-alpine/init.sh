@@ -22,7 +22,7 @@ if [ "$ARIA_HTTP_METHOD" != "" ]; then
 fi
 if [ "$ARIA_SECRET" != "" ]; then
     echo "Update secret"
-    sed -i "s/secret:\"[a-zA-Z0-9\.-_]*\"/secret:\"$ARIA_SECRET\"/" /usr/share/nginx/html/js/aria-ng*
+    sed -i "s/secret:\"[a-zA-Z0-9\.-_]*\"/secret:\"$(echo -n $ARIA_SECRET | base64)\"/" /usr/share/nginx/html/js/aria-ng*
 fi
 
 nginx -g "daemon off;"
