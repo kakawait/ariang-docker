@@ -1,0 +1,8 @@
+version: '3.2'
+
+services:
+  ariang:
+    build: ./nginx16-alpine
+    restart: unless-stopped
+    ports:
+      - 16800:80

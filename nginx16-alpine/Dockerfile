@@ -1,6 +1,7 @@
 FROM alpine as downloader
 
 LABEL MAINTAINER="Rémy Jacquin <remy@remyj.fr>"
+LABEL MAINTAINER="Thibaud Lepretre <me@thibaud.dev>"
 
 RUN \
  apk add --no-cache --virtual=build-dependencies \
