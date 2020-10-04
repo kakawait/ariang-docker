@@ -14,6 +14,14 @@ AriaNG image served by nginx
 | ARIA_SECRET      | Secret for Aria         |           |                                                             |
 
 ## Usage
+
 ```
-docker run -p80:80 -eARIA_HOST=172.17.0.1 -eARIA_PORT=8080 --name ariang -d remyj38/ariang
+docker build -t kakawait/ariang ./nginx16-alpine/.
+docker run -p80:80 -eARIA_HOST=172.17.0.1 -eARIA_PORT=8080 --name ariang -d kakawait/ariang
+```
+
+or 
+
+```
+docker-compose up -d
 ```
